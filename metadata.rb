@@ -13,7 +13,7 @@ recipe 'magento', 'Prepares app stack for magento deployments'
 end
 
 %w(apt yum apache2 nginx mysql openssl php yum-epel
-   mysql_chef_gem).each do |cb|
+  ).each do |cb|
   depends cb
 end
 

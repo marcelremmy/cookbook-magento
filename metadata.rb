@@ -12,11 +12,11 @@ recipe 'magento', 'Prepares app stack for magento deployments'
   supports os
 end
 
-%w(apt yum apache2 nginx mysql openssl php yum-epel
+%w(apt yum apache2 nginx openssl php yum-epel
   ).each do |cb|
   depends cb
 end
 
-depends 'mysql', '~> 6.0'
+depends 'mysql', '~> 5.0'
 depends 'php-fpm', '>= 0.6.4'
 depends 'nginx', '~> 2.6'

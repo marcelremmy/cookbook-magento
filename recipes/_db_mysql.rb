@@ -6,7 +6,9 @@ unless File.exist?(installed_file)
 
   include_recipe 'mysql::server'
   include_recipe 'mysql::client'
-  include_recipe 'mysql_chef_gem'
+  mysql_chef_gem 'default' do
+    action :install
+  end
 
   root_password = node[:mysql][:server_root_password]
   db_config = node[:magento][:db]
